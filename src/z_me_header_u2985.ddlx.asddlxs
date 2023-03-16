@@ -1,0 +1,75 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI: {
+headerInfo: {
+    typeName: 'Sales Order',
+    typeNamePlural: 'Sales Orders',
+
+    title: {
+        type: #STANDARD,
+        value: 'Id'
+           }
+} }
+
+annotate entity Z_C_HEADER_U2985 with
+{
+  @UI.facet: [{ id        : 'Header',
+                purpose   : #STANDARD,
+                type      : #IDENTIFICATION_REFERENCE,
+                label     : 'Header - Sales Order',
+                position  : 10 },
+              { id            : 'Items',
+                purpose       : #STANDARD,
+                type          : #LINEITEM_REFERENCE,
+                label         : 'Items - Sales Order',
+                position      : 20,
+                targetElement : '_Items'}]
+  @UI: {
+      lineItem        : [{ position: 10, importance: #HIGH }],
+      identification  : [{ position: 10, label: 'Order ID' }]}
+  Id;
+
+  @UI: {
+     lineItem: [{ position: 20, importance: #HIGH }],
+     identification: [ { position: 20,  label: 'Email' } ] }
+  Email;
+  
+  @UI: {
+  lineItem: [{ position: 30, importance: #HIGH }],
+  identification: [ { position: 30,  label: 'First Name' } ] }
+  @Search.defaultSearchElement: true
+  FirstName;
+
+  @UI: {
+       lineItem: [{ position: 40, importance: #MEDIUM }],
+       identification: [ { position: 40,  label: 'Last Name' } ] }
+  LastName;
+
+  @UI: {
+    lineItem: [{ position: 50, importance: #MEDIUM }],
+    identification: [ { position: 50,  label: 'Country' } ] }
+  Country;
+
+  @UI: {
+    lineItem: [{ position: 60, importance: #LOW }],
+    identification: [ { position: 60,  label: 'Create On' } ] }
+  CreateOn;
+
+  @UI: {
+  lineItem: [{ position: 70, importance: #MEDIUM }],
+  identification: [ { position: 70, label: 'Delivery Date' } ] }
+  DeliveryDate;
+
+  @UI: {
+  lineItem: [{ position: 80, importance: #HIGH }],
+  identification: [ { position: 80,  label: 'Status' } ],
+  textArrangement: #TEXT_ONLY }
+  Status;
+
+  @UI: {
+  lineItem: [{ position: 90, importance: #LOW }],
+  identification: [ { position: 90,  label: 'Image URL' } ] }
+  ImageUrl;
+
+
+}

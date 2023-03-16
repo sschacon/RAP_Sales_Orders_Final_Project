@@ -1,0 +1,71 @@
+managed implementation in class zbp_i_header_u2985 unique;
+//strict ( 1 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZI_HEADER_U2985 alias Header
+persistent table zheader_u2985
+lock master
+authorization master ( instance )
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) LastChangedAt, LastChangedBy, CreatedBy, CreatedAt;
+  field ( mandatory : create ) id;
+  field ( features : instance ) id;
+
+  association _Items { create ( features : instance ); }
+  mapping for zheader_u2985
+    {
+      Id            = id;
+      Email         = Email;
+      FirstName     = FirstName;
+      LastName      = LastName;
+      Country       = Country;
+      CreateOn      = CreateOn;
+      DeliveryDate  = DeliveryDate;
+      OrderStatus   = orderstatus;
+      ImageUrl      = ImageUrl;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+
+
+
+}
+
+define behavior for ZI_ITEMS_U2985 alias Items
+persistent table zitems_u2985
+lock dependent by _Header
+authorization dependent by _Header
+etag master LastChangedAt
+{
+  update;
+  delete;
+
+  field ( readonly ) id;
+
+  association _Header;
+  mapping for zitems_u2985
+    {
+      Id               = id;
+      Name             = name;
+      Description      = description;
+      ReleaseDate      = releasedate;
+      DiscontinuedDate = discontinueddate;
+      Price            = price;
+      CurrencyCode     = currency_code;
+      Height           = height;
+      Width            = width;
+      Depth            = depth;
+      Quantity         = quantity;
+      UnitOfMeasure    = unitofmeasure;
+      LastChangedAt    = last_changed_at;
+    }
+
+
+
+}

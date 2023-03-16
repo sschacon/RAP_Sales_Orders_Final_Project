@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition - Sales Orders'
+define service ZSD_SALES_ORDER_U2985 {
+  expose Z_C_HEADER_U2985 as Header;
+  expose Z_C_ITEMS_U2985 as Items;
+  expose I_Currency as Currency;
+}

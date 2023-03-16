@@ -1,0 +1,71 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI: {
+    headerInfo: {
+        typeName        : 'Item',
+        typeNamePlural  : 'Items',
+        title: { type: #STANDARD,
+        value: 'Id' }
+ } }
+
+annotate entity Z_C_ITEMS_U2985 with
+{
+  @UI.facet: [{ id        : 'Items',
+                purpose   : #STANDARD,
+                type      : #IDENTIFICATION_REFERENCE,
+                label     : 'Item',
+                position  : 10 }]
+  Id;
+
+  @Search.defaultSearchElement: true
+  @UI: {
+      lineItem        : [{ position: 10, importance: #HIGH }],
+      identification  : [{ position: 10, label: 'Name'  }]}
+  Name;
+
+  @UI: {
+  lineItem: [{ position: 20, importance: #LOW }],
+  identification: [ { position: 20, label: 'Description'  } ] }
+  Description;
+
+  @UI: {
+  lineItem: [{ position: 30, importance: #LOW }],
+  identification: [ { position: 30, label: 'Release Date'  } ] }
+  ReleaseDate;
+
+  @UI: {
+  lineItem: [{ position: 40, importance: #LOW }],
+  identification: [ { position: 40, label: 'Discontinued Date'  } ] }
+  DiscontinuedDate;
+
+  @UI: {
+  lineItem: [{ position: 50, importance: #HIGH }],
+  identification: [ { position: 50, label: 'Price'  } ] }
+  Price;
+
+  @UI: {
+  lineItem: [{ position: 60, importance: #MEDIUM }],
+  identification: [ { position: 60, label: 'Height'  } ] }
+  Height;
+
+  @UI: {
+  lineItem: [{ position: 70, importance: #MEDIUM }],
+  identification: [ { position: 70, label: 'Width'  } ] }
+  Width;
+
+  @UI: {
+  lineItem: [{ position: 80, importance: #MEDIUM }],
+  identification: [ { position: 80, label: 'Depth'  } ] }
+  Depth;
+
+  @UI: {
+  lineItem: [{ position: 90, importance: #HIGH }],
+  identification: [ { position: 90, label: 'Quantity'  } ] }
+  Quantity;
+
+  @UI: {
+  lineItem: [{ position: 100, importance: #LOW }],
+  identification: [ { position: 100, label: 'Unit of Measure'  } ] }
+  UnitOfMeasure;
+
+}

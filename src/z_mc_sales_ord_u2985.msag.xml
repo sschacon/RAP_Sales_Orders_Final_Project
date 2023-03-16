@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>Z_MC_SALES_ORD_U2985</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Clase de mensajes Sales Order</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MC_SALES_ORD_U2985</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Sales Order &amp;1 created</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MC_SALES_ORD_U2985</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Sales Order &amp;1 updated</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MC_SALES_ORD_U2985</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Sales Order &amp;1 deleted</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

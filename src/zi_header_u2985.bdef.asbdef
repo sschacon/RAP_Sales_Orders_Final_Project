@@ -19,14 +19,14 @@ etag master LastChangedAt
   mapping for zheader_u2985
     {
       Id            = id;
-      Email         = Email;
-      FirstName     = FirstName;
-      LastName      = LastName;
-      Country       = Country;
-      CreateOn      = CreateOn;
-      DeliveryDate  = DeliveryDate;
+      Email         = email;
+      FirstName     = firstName;
+      LastName      = lastName;
+      Country       = country;
+      CreateOn      = createOn;
+      DeliveryDate  = deliveryDate;
       OrderStatus   = orderstatus;
-      ImageUrl      = ImageUrl;
+      ImageUrl      = imageUrl;
       CreatedBy     = created_by;
       CreatedAt     = created_at;
       LastChangedBy = last_changed_by;

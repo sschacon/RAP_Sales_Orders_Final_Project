@@ -17,13 +17,13 @@ CLASS zcl_insert_data_pro_fin_2985 IMPLEMENTATION.
 
 */  Declaración de variables
     DATA:
-      ls_header TYPE zheader_u2985,
+      ls_header TYPE ztheader_u2985,
       ls_items  TYPE  zitems_u2985,
-      lt_header TYPE TABLE OF zheader_u2985,
+      lt_header TYPE TABLE OF ztheader_u2985,
       lt_items  TYPE TABLE OF zitems_u2985.
 
 */  Borramos datos previsos
-    DELETE FROM: zheader_u2985,
+    DELETE FROM: ztheader_u2985,
                  zitems_u2985.
 
     ls_header-id           = '1'.
@@ -92,7 +92,7 @@ CLASS zcl_insert_data_pro_fin_2985 IMPLEMENTATION.
     ls_header-imageurl     = 'http://dummyimage.com/150x100.png/5fa2dd/ffffff'.
     APPEND ls_header TO lt_header.
 
-    INSERT zheader_u2985 FROM TABLE @lt_header.
+    INSERT ztheader_u2985 FROM TABLE @lt_header.
 
     ls_items-id               = '1'.
     ls_items-name             = '88-449-4065'.

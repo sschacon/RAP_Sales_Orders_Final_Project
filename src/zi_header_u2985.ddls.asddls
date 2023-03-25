@@ -4,7 +4,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'CDS Interface - Header'
 define root view ZI_HEADER_U2985
-  as select from zheader_u2985 as Header
+  as select from ztheader_u2985 as Header
   composition [0..1] of ZI_ITEMS_U2985 as _Items
 
 {

@@ -4,7 +4,7 @@ projection;
 define behavior for Z_C_HEADER_U2985 alias Header
 {
 
-  field ( readonly ) Id;
+  //field ( readonly ) Id;
 
   use create;
   use update;

@@ -2,7 +2,7 @@ managed implementation in class zbp_i_header_u2985 unique;
 //strict ( 1 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
 
 define behavior for ZI_HEADER_U2985 alias Header
-persistent table zheader_u2985
+persistent table ztheader_u2985
 lock master
 authorization master ( instance )
 etag master LastChangedAt
@@ -13,29 +13,26 @@ etag master LastChangedAt
 
   field ( readonly ) LastChangedAt, LastChangedBy, CreatedBy, CreatedAt;
   field ( mandatory : create ) id;
-  field ( features : instance ) id;
+  //field ( features : instance ) id;
 
   association _Items { create ( features : instance ); }
-  mapping for zheader_u2985
+  mapping for ztheader_u2985
     {
       Id            = id;
       Email         = email;
-      FirstName     = firstName;
-      LastName      = lastName;
+      FirstName     = firstname;
+      LastName      = lastname;
       Country       = country;
-      CreateOn      = createOn;
-      DeliveryDate  = deliveryDate;
+      CreateOn      = createon;
+      DeliveryDate  = deliverydate;
       OrderStatus   = orderstatus;
-      ImageUrl      = imageUrl;
+      ImageUrl      = imageurl;
       CreatedBy     = created_by;
       CreatedAt     = created_at;
       LastChangedBy = last_changed_by;
       LastChangedAt = last_changed_at;
     }
-
-
-
-}
+ }
 
 define behavior for ZI_ITEMS_U2985 alias Items
 persistent table zitems_u2985
@@ -65,7 +62,4 @@ etag master LastChangedAt
       UnitOfMeasure    = unitofmeasure;
       LastChangedAt    = last_changed_at;
     }
-
-
-
-}
+ }
